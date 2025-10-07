@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Computer Science Engineering</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: url('images/back\ \(3\).jpg') no-repeat center center/cover;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    }
+
+    .hero p {
+      font-size: 1.3em;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+      margin-bottom: 40px;
+    }
+
+    .hero .about-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .hero .about-content img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .hero .about-content p {
+      font-size: 1.1em;
+      text-align: left;
+      text-shadow: none;
+    }
+
+    .section {
+      padding: 60px 20px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .section:nth-child(even) {
+      background-color: #eef2f7;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .content-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .content-row img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+    }
+
+    .content-row p, .content-row ul {
+      flex: 1;
+      font-size: 1.1em;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .grid li, .card {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      list-style: none;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1f2937;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .content-row {
+        flex-direction: column;
+      }
+
+      .hero .about-content p {
+        text-align: center;
+      }
+    }
+    .hero-box {
+  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 950px;
+  margin: auto;
+}
+
+.hero-box h1,
+.hero-box p,
+.hero-box .about-content p {
+  color: #fff;
+}
+.h1{
+  text-align: center;
+   font-size: 36px;
+  font-weight: 600;
+  
+}
+/* Skills Section Background */
+#skills {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+}
+
+/* Style individual skill items */
+.skills-list li {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 12px 18px;
+  margin: 10px 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  cursor: default;
+}
+
+/* Glow effect on hover */
+.skills-list li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .skills-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .skills-list li {
+    display: inline-block;
+    margin-right: 15px;
+  }
+}
+/* Curriculum Section Gradient Background */
+#curriculum {
+  background: linear-gradient(to right, #1e3c72, #58dbfc); /* blue gradient */
+  color: white;
+}
+
+/* Style curriculum list items */
+.learn-list li {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 15px 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  cursor: default;
+}
+
+/* Glow on hover */
+.learn-list li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+/* Careers Section Gradient Background */
+#careers {
+  background: linear-gradient(to right, #202020, #2c4852, #2c5364); /* professional dark blue gradient */
+  color: white;
+}
+
+/* Style individual career cards */
+.career-grid .card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  cursor: default;
+}
+
+/* Glow on hover */
+.career-grid .card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+/* Course Details - Gradient Background */
+#details {
+  background: linear-gradient(135deg, #eef2f3, #dbe9f4); /* light and modern gradient */
+  padding: 60px 20px;
+  color: #222;
+}
+
+/* Flex container for course info */
+.course-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+/* Each card */
+.detail-card {
+  flex: 1 1 300px;
+  background: rgba(255, 255, 255, 0.8);
+  border-left: 4px solid #4a90e2;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.detail-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Headings and text */
+.detail-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.4em;
+  color: #0a3d62;
+}
+
+.detail-card p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.about-cse-container {
+    background-color: #1e90ff;
+    color: white;
+    padding: 20px 30px;
+    margin: 40px auto;
+    max-width: 700px;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 6px 12px rgba(30, 144, 255, 0.4);
+    transition: background-color 0.3s ease;
+  }
+  .about-cse-container:hover {
+    background-color: #0f6ad4;
+  }
+
+  .about-cse-content {
+    max-width: 700px;
+    margin: 20px auto 60px auto;
+    background-color: #f0f4f8;
+    border-radius: 12px;
+    padding: 25px 30px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    color: #333;
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+
+  .about-cse-content p {
+    margin-bottom: 20px;
+  }
+
+  .about-images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .about-images img {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  .about-images img:hover {
+    transform: scale(1.05);
+  }
+.gallery-toggle {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  padding: 18px 30px;
+  font-size: 1.4em;
+  text-align: center;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 40px auto 0 auto;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: background 0.3s ease;
+}
+
+.gallery-toggle:hover {
+  background: linear-gradient(to right, #203a43, #2c5364, #0f2027);
+}
+
+.gallery-content {
+  margin: 20px auto 60px auto;
+  max-width: 1000px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f4f7fa;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+.footer{
+   background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  padding: 30px 0;
+
+ }
+ .footer h4{
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-weight: 600;
+ }
+ .icons .fa{
+  color: #f44336;
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 18px 0;
+ }
+ .fa-heart-o{
+  color: #f44336;
+ }
+  </style>
+</head>
+<body>
+
+  <!-- Combined Hero + About Section -->
+  <!-- Combined Hero + About Section with Text Box -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-box">
+       <!-- Admissions Link Label -->
+<div class="admissions-label">
+    <a href="admission.html">🎓 Admissions Opened</a>
+</div>
+      <h1>Computer Science Engineering</h1>
+      <p>Explore the future of technology and innovation through CSE.</p>
+
+      <div class="about-content">
+        
+        <p class="classic-paragraph">
+          <h1>What is CSE?</h1><br />
+          Computer Science Engineering (CSE) blends computer science with engineering to build hardware and software systems. It is central to modern technologies and innovation in every industry.
+        </p>
+        
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Curriculum -->
+  <!-- Curriculum -->
+<section class="section" id="curriculum">
+  <div class="container">
+    <h2>What Do Students Learn?</h2>
+    <ul class="grid learn-list">
+      <li>Programming (Python, Java, C++)</li>
+      <li>Data Structures & Algorithms</li>
+      <li>Database Management Systems</li>
+      <li>Operating Systems</li>
+      <li>Computer Networks</li>
+      <li>Artificial Intelligence & ML</li>
+      <li>Cybersecurity</li>
+      <li>Cloud Computing</li>
+      <li>Web & Mobile Development</li>
+      <li>Software Engineering</li>
+    </ul>
+  </div>
+</section>
+
+
+  <!-- Skills -->
+ <!-- Skills -->
+<section class="section" id="skills">
+  <div class="container">
+    <h2>Skills You Develop</h2><br>
+    <div class="content-row reverse">
+      <img src="images/lady engeneer student (2).jpg" alt="Skills Image">
+      <ul class="skills-list">
+        <li>Problem-solving & logic</li>
+        <li>Software & systems design</li>
+        <li>Data analysis & AI</li>
+        <li>Project management</li>
+        <li>Communication & teamwork</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Careers -->
+  <!-- Careers -->
+<section class="section" id="careers">
+  <div class="container">
+    <h2>Career Opportunities</h2>
+    <div class="grid career-grid">
+      <div class="card">Software Engineer</div>
+      <div class="card">Data Scientist</div>
+      <div class="card">Cybersecurity Analyst</div>
+      <div class="card">AI/ML Engineer</div>
+      <div class="card">Cloud Architect</div>
+      <div class="card">Web/App Developer</div>
+    </div>
+  </div>
+</section>
+
+  <!-- Course Info -->
+  <!-- Course Info -->
+<section class="section" id="details">
+  <div class="container">
+    <h2>Course Details</h2>
+    <div class="course-details">
+      <div class="detail-card">
+        <h3>Duration</h3>
+        <p>3 years (DIPLOMA)</p>
+      </div>
+      <div class="detail-card">
+        <h3>Eligibility</h3>
+        <p>10th with Minimum Marks </p>
+      </div>
+    </div>
+  </div>
+  </section>
+  <section class="bgr" style="padding: 40px 20px; background: linear-gradient(135deg, #233649, #4e85fc)">
+  <!-- ABOUT CSE Container -->
+<div class="about-cse-container" id="aboutCSE">
+  <h2>ABOUT CSE</h2>
+</div>
+
+<!-- Hidden detailed content -->
+<div class="about-cse-content" id="aboutCSEContent" style="display: none;">
+  <p>
+    💻 Computer Science and Engineering (CSE) – Diploma
+The Diploma in Computer Science and Engineering (CSE) is a professional program that equips students with foundational and advanced knowledge in computing technologies. It covers key areas like programming languages, data structures, computer networks, software development, web technologies, and cybersecurity. This course is ideal for students who are passionate about computers and want to pursue careers in software development, IT support, or systems engineering. With practical training and project-based learning, CSE diploma holders are well-prepared for both job placements and higher studies in the field of computer science.
+
+  </p>
+  <hr><hr>
+
+  <p>
+    Computer Science Engineering (CSE) is a multidisciplinary branch that focuses on the design, development, and implementation of computer systems and software. It combines elements of electrical engineering and computer science to create innovative solutions.
+  </p>
+  <p>💡 About Diploma in Computer Science & Engineering (CSE)
+The Diploma in Computer Science and Engineering (CSE) is a 3-year technical program designed to provide in-depth knowledge of computer systems, software, and applications. It is ideal for students who have completed their 10th standard and are looking to enter the technology field early.
+
+Students learn:
+
+Programming Languages: C, Python, Java, and more
+
+Web & App Development: Frontend & backend development
+
+Data Structures & Algorithms: Problem-solving foundations
+
+Computer Hardware & Networking: Assembling, configuring, and troubleshooting
+
+Operating Systems & DBMS: Core system and data management skills
+
+Software Engineering & Project Development: Real-world application of knowledge
+
+This course balances theory and hands-on labs, preparing students for job roles like Junior Developer, Tech Support Engineer, IT Technician, or even to start their own freelancing or startup journey.
+
+Upon completion, students can either:
+
+Get placed in IT companies, service sectors, or government tech jobs
+
+Pursue lateral entry into B.Tech programs for further studies
+
+ <br><hr><hr>
+    Students learn about algorithms, programming languages, computer architecture, and more — enabling them to build complex software and hardware systems that power today's technology-driven world.
+  </p>
+  <div class="about-images">
+    <a href="images/create image for webpage abot cse.jpg"><img src="images/create image for webpage abot cse.jpg" alt="Technology Image" /></a>
+    <a href="images/create image for webpage abot cse (1).jpg"><img src="images/create image for webpage abot cse (1).jpg" alt="Programming Image" /></a>
+  </div>
+</div>
+
+
+
+<script>
+  const aboutContainer = document.getElementById('aboutCSE');
+  const aboutContent = document.getElementById('aboutCSEContent');
+
+  aboutContainer.addEventListener('click', () => {
+    if (aboutContent.style.display === 'none' || aboutContent.style.display === '') {
+      aboutContent.style.display = 'block';
+      aboutContainer.style.borderBottomLeftRadius = '0';
+      aboutContainer.style.borderBottomRightRadius = '0';
+    } else {
+      aboutContent.style.display = 'none';
+      aboutContainer.style.borderRadius = '12px';
+    }
+  });
+</script>
+
+
+
+
+</section>
+<!-- GVIC CSE Gallery Section Start -->
+<section id="gvic-cse-gallery" style="padding: 40px 20px; font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #233649, #4e85fc)">
+  <div style="max-width: 1100px; margin: auto;">
+    
+    <!-- Toggle Label -->
+    <div id="galleryToggle" style="
+      background: linear-gradient(135deg, #004e92, #000428);
+      color: white;
+      padding: 16px 24px;
+      font-size: 1.5em;
+      font-weight: 600;
+      text-align: center;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+    ">
+      GVIC CSE Gallery
+    </div>
+
+    <!-- Gallery Images (Initially Hidden) -->
+    <div id="galleryContent" style="display: none; padding: 30px 10px;">
+      <div style="
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+      ">
+        <a href="images/back (1).jpg"><img src="images/back (1).jpg" alt="Gallery Image 1" style="width: 100%; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;">
+        </a>
+          <a href="images/campus.jpg"><img src="images/campus.jpg" alt="Gallery Image 2" style="width: 100%; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;">
+            </a>
+       
+            <a href="images/campus1.jpg"> <img src="images/campus1.jpg" alt="Gallery Image 3" style="width: 100%; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;">
+            </a>
+        <img src="images/campus2.jpg" alt="Gallery Image 4" style="width: 100%; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- JavaScript for Toggle Effect -->
+<script>
+  const galleryToggle = document.getElementById("galleryToggle");
+  const galleryContent = document.getElementById("galleryContent");
+
+  galleryToggle.addEventListener("click", () => {
+    if (galleryContent.style.display === "none" || galleryContent.style.display === "") {
+      galleryContent.style.display = "block";
+    } else {
+      galleryContent.style.display = "none";
+    }
+  });
+</script>
+
+
+  <!-- Footer -->
+  
+    <section class="footer">
+        <h4>ABOUT US</h4>
+        <P>Golden Valley Integrated Campus (GVIC) is one of the first Integrated Campus in the whole of India . GVIC is located in a pleasant and serene background on National Highway 205, 11 kms from Madanapalle and 20 kms from the Horsley Hills (Andhra Ooty). GVIC has been named with the sacred belief of turning young people's future into a Golden path. Madanapalle has been an Educational and Cultural Centre from early 1915. Shri. N.V.Ramana Reddy along with several other professionals and academicians has been striving hard to promote the best educational standards with international practices to improve the quality of professional education in rural areas.</P>
+        <div class="icons">
+            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-twitter-square" aria-hidden="true"></i>
+            <i class="fa fa-google" aria-hidden="true"></i>
+            
+        </div>
+        <p>GOLDEN VALLEY INTEGRATED CAMPUS <i class="fa fa-heart-o" aria-hidden="true"></i>(GVIC)</p>
+    </section>
+  
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MBA – Big Data Analytics | GVIC</title>
+  <link rel="stylesheet" href="STYLE.CSS"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <style>
+    .hero-section {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/bigdata-hero.jpg') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-section h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    .content-section {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+      line-height: 1.8;
+    }
+
+    .content-section h2 {
+      color: #0a4275;
+      margin-bottom: 20px;
+    }
+
+    .content-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .content-grid img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+    .content-grid .text {
+      flex: 1;
+    }
+
+    .content-grid .image {
+      flex: 1;
+    }
+
+    @media (max-width: 768px) {
+      .content-grid {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER from existing template -->
+  <section class="header">
+    <nav>
+      <a href="main.html"><img src="images/logo1.png" alt="GVIC Logo" /></a>
+      <div class="nav-links" id="navlinks">
+        <i class="fa fa-times" onclick="hidemenu()"></i>
+        <ul>
+          <li><a href="main.html">Home</a></li>
+          <li><a href="course.html">COURSE</a></li>
+          <li><a href="facilities.html">FACILITIES</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showmenu()"></i>
+    </nav>
+    <div class="text-box">
+      <h1>MBA – Big Data Analytics</h1>
+      <p>Shape the future of data-driven decision making</p>
+    </div>
+  </section>
+
+  <!-- HERO IMAGE -->
+  <div class="hero-section">
+    <h1>Master the Art of Big Data</h1>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content-section">
+    <h2>About the Program</h2>
+    <p>
+      The MBA in Big Data Analytics at GVIC equips students with cutting-edge skills in data interpretation, visualization, and strategic decision-making. This program is designed for aspiring managers who want to transform businesses using large-scale data technologies.
+    </p>
+
+    <div class="content-grid">
+      <div class="image">
+        <img src="images/data-dashboard.jpg" alt="Big Data Dashboard">
+      </div>
+      <div class="text">
+        <h2>Key Features</h2>
+        <ul>
+          <li>Learn Hadoop, Python, SQL, and Spark</li>
+          <li>Hands-on projects with real-world datasets</li>
+          <li>Internships & industry collaborations</li>
+          <li>Data-driven decision-making frameworks</li>
+          <li>Special focus on AI & machine learning integration</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content-grid" style="margin-top: 50px;">
+      <div class="text">
+        <h2>Career Opportunities</h2>
+        <p>
+          Upon completing this program, graduates can work as:
+        </p>
+        <ul>
+          <li>Data Analyst / Scientist</li>
+          <li>Business Intelligence Consultant</li>
+          <li>Analytics Project Manager</li>
+          <li>Market Research Analyst</li>
+          <li>Big Data Engineer</li>
+        </ul>
+      </div>
+      <div class="image">
+        <img src="images/bigdata-jobs.jpg" alt="Careers in Big Data">
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <section class="footer">
+    <h4>ABOUT US</h4>
+    <p>Golden Valley Integrated Campus is committed to academic excellence and industry-driven learning. Our MBA programs blend management principles with the latest in technology and innovation.</p>
+    <div class="icons">
+      <i class="fa fa-facebook-square"></i>
+      <i class="fa fa-instagram"></i>
+      <i class="fa fa-twitter-square"></i>
+      <i class="fa fa-google"></i>
+    </div>
+    <p>GOLDEN VALLEY INTEGRATED CAMPUS <i class="fa fa-heart-o"></i> (GVIC)</p>
+  </section>
+
+  <script>
+    var navlinks = document.getElementById("navlinks");
+    function showmenu() {
+      navlinks.style.right = "0";
+    }
+    function hidemenu() {
+      navlinks.style.right = "-200px";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GVIC - UG Courses</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #567fbd, #ffffff);
+      color: #333;
+    }
+
+    header {
+      background: url('images/lady_engineer_student_1.jpg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 50, 0.6);
+      z-index: 0;
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    header p {
+      font-size: 1.2em;
+    }
+
+    .course-section {
+      max-width: 1000px;
+      margin: -50px auto 40px;
+      padding: 30px;
+      background: linear-gradient(145deg, rgba(202, 197, 197, 0.9), rgba(132, 164, 226, 0.85));
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .course-section h2 {
+      color: #0033a0;
+      font-size: 2.2em;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    ul.course-list {
+      list-style: none;
+      padding: 0;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    ul.course-list li {
+      background: #e7f0ff;
+      margin: 12px 0;
+      padding: 15px 20px;
+      border-left: 5px solid #0052d4;
+      border-radius: 8px;
+      font-size: 1.1em;
+      transition: transform 0.2s;
+    }
+
+    ul.course-list li:hover {
+      transform: translateX(10px);
+      background: #d0e3ff;
+    }
+
+    .course-list li a {
+      color: inherit;
+      text-decoration: none;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .course-list li a:hover {
+      color: inherit;
+    }
+
+    footer {
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      position: relative;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+
+    footer > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer h1 {
+      margin-bottom: 20px;
+      font-weight: 600;
+      font-size: 1.5em;
+    }
+
+    .footer p {
+      margin-bottom: 15px;
+      font-size: 1em;
+    }
+
+    .icons i {
+      margin: 0 10px;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      .course-section h2 {
+        font-size: 1.5em;
+      }
+
+      ul.course-list li {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+     <!-- Admissions Link Label -->
+<div class="admissions-label">
+    <a href="admission.html">🎓 Admissions Opened</a>
+</div>
+
+    <h1>GVIC - UG Courses</h1>
+    <p>Empowering Futures through Engineering Excellence</p>
+  </header>
+
+  <section class="course-section">
+    <h2>Undergraduate B.Tech Programs Offered</h2>
+    <ul class="course-list">
+      <li><a href="cse.html">B.Tech in Computer Science</a></li>
+      <li><a href="cse-ai&ml.html">B.Tech in CSE – AI & ML</a></li>
+      <li><a href="cse-ai.html">B.Tech in CSE – Artificial Intelligence</a></li>
+      <li><a href="cse-datascience.html">B.Tech in CSE – Data Science</a></li>
+      <li><a href="eee.html">B.Tech in Electrical Engineering</a></li>
+      <li><a href="ece.html">B.Tech in Electronics and Communication Engineering</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <section class="footer">
+      <h1>ABOUT US</h1>
+      <p>
+        Golden Valley Integrated Campus (GVIC) is one of the first Integrated Campuses in India. GVIC is located in a pleasant and serene background on NH-205, 11 km from Madanapalle and 20 km from Horsley Hills. GVIC is committed to transforming young minds into golden futures. 
+        Madanapalle has been a hub of education since 1915. Shri N.V. Ramana Reddy and a team of professionals strive to bring international standards to rural education.
+      </p>
+      <div class="icons">
+        <a href="#"><i class="fab fa-facebook-square"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter-square"></i></a>
+        <a href="#"><i class="fab fa-google"></i></a>
+      </div>
+      <p>GOLDEN VALLEY INTEGRATED CAMPUS (GVIC)</p>
+    </section>
+
+    <p>© 2025 GVIC | Golden Valley Integrated Campus. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

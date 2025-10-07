@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UG ECE – Electronics & Communication Engineering</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+      color: #333;
+    }
+
+    header {
+      background-image: url('images/ece\ \(3\).jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 1;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(6px);
+      padding: 40px 60px;
+      border-radius: 15px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .header-content h1 {
+      font-size: 56px;
+      margin-bottom: 15px;
+    }
+
+    .header-content p {
+      font-size: 22px;
+    }
+
+    .container {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      padding: 40px 30px;
+      margin: 40px auto;
+      max-width: 1200px;
+      transition: 0.3s ease;
+    }
+
+    .container:hover {
+      transform: scale(1.01);
+    }
+
+    h2 {
+      font-size: 32px;
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 25px;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      padding: 20px;
+      border-radius: 15px;
+      flex: 1 1 250px;
+      text-align: center;
+      color: #000;
+      font-weight: 500;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    li:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .gallery img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      transition: 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .text-block {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #444;
+      text-align: center;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    footer {
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+       <!-- Admissions Link Label -->
+<div class="admissions-label">
+    <a href="admission.html">🎓 Admissions Opened</a>
+</div>
+      <h1>UG ECE – Electronics & Communication</h1>
+      <p>Empowering innovation through electronics and connectivity</p>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2>About the Program</h2>
+    <div class="text-block">
+      Our UG ECE program is designed to equip students with in-depth knowledge in electronics, communication systems, embedded technologies, and signal processing. Students learn to innovate, design, and implement electronic systems that power our modern digital world.
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Vision & Mission</h2>
+    <div class="text-block">
+      <strong>Vision:</strong> To produce globally competent engineers in the field of electronics and communication.<br/><br/>
+      <strong>Mission:</strong> To provide quality education, foster research and innovation, and prepare students to meet industrial and societal needs.
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Program Highlights</h2>
+    <ul>
+      <li>Analog & Digital Circuit Design</li>
+      <li>VLSI and Embedded Systems</li>
+      <li>Signal Processing & Communication</li>
+      <li>Robotics and IoT</li>
+      <li>Control Systems and Automation</li>
+      <li>Wireless & Satellite Communication</li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h2>Skills Developed</h2>
+    <ul>
+      <li>Hardware Programming</li>
+      <li>PCB and Circuit Simulation</li>
+      <li>Embedded C / IoT Solutions</li>
+      <li>Communication System Analysis</li>
+      <li>Electromagnetics and RF Design</li>
+      <li>Project-Based Learning</li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h2>Course Structure</h2>
+    <div class="text-block">
+      The ECE program includes foundational courses in electronics and mathematics, core subjects like microprocessors, analog/digital communication, and advanced electives such as IoT, AI for electronics, and VLSI Design.
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Top Recruiters</h2>
+    <ul>
+      <li>Intel</li>
+      <li>Texas Instruments</li>
+      <li>Qualcomm</li>
+      <li>Samsung R&D</li>
+      <li>DRDO & ISRO</li>
+      <li>Tata Elxsi</li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h2>Future Opportunities</h2>
+    <ul>
+      <li>Electronics Design Engineer</li>
+      <li>Communication Engineer</li>
+      <li>Embedded Systems Developer</li>
+      <li>IoT Solution Architect</li>
+      <li>RF Engineer</li>
+      <li>Research Associate</li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h2>ECE In Action – Gallery</h2>
+    <div class="gallery">
+      <img src="images/ece (1).jpg" alt="Lab 1" />
+      <img src="images/ece (2).jpg" alt="Robotics" />
+      <img src="images/ece (4).jpg" alt="Workshop" />
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 GVIC | Department of ECE. All rights reserved.</p>
+    <p>Built with ⚡ by <a href="#">GVIC Web Team</a></p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Golden Valley Integrated Campus</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0f172a, #1e3a8a, #2563eb);
+      color: #fff;
+    }
+
+    .contact-section {
+      position: relative;
+      padding: 60px 20px;
+    }
+
+    .contact-container {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      background: #fff;
+      color: #333;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .contact-form h2 {
+      margin-bottom: 20px;
+      color: #a9bcf1;
+    }
+
+    .contact-form label {
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 8px;
+      display: block;
+      color: #444;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 8px rgba(37, 99, 235, 0.4);
+    }
+
+    .contact-form button {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      background: #9fb9f1;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #254cce;
+    }
+
+    /* Contact Details */
+    .contact-info h2 {
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* Map */
+    .map-container {
+      margin-top: 20px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      border: 4px solid #fff;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="contact-section">
+    <div class="contact-container">
+      
+      <!-- Left: Form -->
+      <div class="contact-form">
+        <h2>Contact us</h2>
+        <form action="#" method="POST">
+          <label>Full Name</label>
+          <input type="text" name="name" required>
+          
+          <label>Email Address</label>
+          <input type="email" name="email" required>
+          
+          <label>Phone Number</label>
+          <input type="tel" name="phone">
+          
+          <label>Message</label>
+          <textarea name="message" rows="5" required></textarea>
+          
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Right: Info + Map -->
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p><strong>Address:</strong><br>
+          Golden Valley Integrated Campus,<br>
+          Kadiri Road,Angallu-Post,Madanapalle, Annamayya District,<br>
+          Andhra Pradesh – 517325
+        </p>
+        <p><strong>Email:</strong> admissions@gvic.ac.in</p>
+        <p><strong>Phone:</strong> +91-9281023825</p>
+        
+
+        <div class="map-container">
+          <iframe 
+            src="https://maps.app.goo.gl/5cvwQHXrJ4hF6HSi7?g_st=aw" 
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GVIC - UG CSE Overview</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #3a3c41, #dae7ff);
+      color: #222;
+    }
+
+    header {
+      background: url('images/create image for webpage abot cse.jpg') no-repeat center center/cover;
+      color: white;
+      padding: 120px 20px 80px;
+      position: relative;
+      text-align: center;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 50, 0.5);
+      z-index: 0;
+    }
+
+    header .content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 30px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 5px #000;
+    }
+
+    header p {
+      font-size: 1.15em;
+      line-height: 1.8;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      background: linear-gradient(135deg, #ffffff, #e0ebff);
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .container h2 {
+      text-align: center;
+      color: #003399;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .box-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 10px;
+    }
+
+    .box-list li {
+      list-style: none;
+      background: #f0f6ff;
+      padding: 15px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: 0.3s ease;
+      border-left: 6px solid #3366cc;
+      font-size: 1em;
+    }
+
+    .box-list li:hover {
+      transform: translateY(-5px);
+      background: #e6f0ff;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      text-shadow: 0 0 8px #99c2ff;
+    }
+
+    .toggle-section {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .toggle-box {
+      display: inline-block;
+      background: #003399;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .toggle-box:hover {
+      background: #001f66;
+    }
+
+    .toggle-content {
+      display: none;
+      margin-top: 20px;
+      background: #f7f9ff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: linear-gradient(to right, #1c1b29, #2f2d4d, #1c1a2e);
+      color: white;
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+
+    footer h2 {
+      color: #66aaff;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+
+    footer p {
+      font-size: 0.95em;
+      max-width: 800px;
+      margin: 10px auto;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      .container h2 {
+        font-size: 1.5em;
+      }
+    }
+  </style>
+  <script>
+    function toggleContent() {
+      const content = document.getElementById('ug-cse-content');
+      content.style.display = content.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <div class="content">
+       <!-- Admissions Link Label -->
+<div class="admissions-label">
+    <a href="admission.html">🎓 Admissions Opened</a>
+</div>
+      <h1>B.Tech in Computer Science & Engineering</h1>
+      <p>UG CSE offers a future-proof path into computing, AI, data science, and much more.</p>
+    </div>
+  </header>
+
+  <section class="toggle-section">
+    <div class="toggle-box" onclick="toggleContent()">ABOUT UG CSE</div>
+    <div id="ug-cse-content" class="toggle-content">
+      <p>The Bachelor of Technology (B.Tech) in Computer Science and Engineering (CSE) is a 4-year undergraduate program that focuses on the theoretical foundations of computation and practical techniques for implementation and application in computer systems.</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <h2>Core Focus Areas</h2>
+    <ul class="box-list">
+      <li>Programming & Software Development</li>
+      <li>Data Structures & Algorithms</li>
+      <li>Computer Architecture & Operating Systems</li>
+      <li>Database Management Systems (DBMS)</li>
+      <li>Computer Networks & Cybersecurity</li>
+      <li>Artificial Intelligence & Machine Learning</li>
+      <li>Web & Mobile App Development</li>
+      <li>Cloud Computing & DevOps</li>
+    </ul>
+  </section>
+
+  <section class="container">
+    <h2>Skills You Will Develop</h2>
+    <ul class="box-list">
+      <li>Analytical and logical thinking</li>
+      <li>Full stack development</li>
+      <li>Team collaboration with Git and Agile</li>
+      <li>Debugging and optimization</li>
+      <li>UI/UX design understanding</li>
+      <li>Project management</li>
+    </ul>
+  </section>
+
+  <section class="container">
+    <h2>Career Opportunities</h2>
+    <ul class="box-list">
+      <li>Software Developer</li>
+      <li>Data Analyst / Data Scientist</li>
+      <li>AI/ML Engineer</li>
+      <li>Cybersecurity Analyst</li>
+      <li>Cloud Solutions Architect</li>
+      <li>DevOps Engineer</li>
+      <li>UI/UX Designer</li>
+    </ul>
+  </section>
+
+  <section class="container">
+    <h2>Higher Studies & Certifications</h2>
+    <ul class="box-list">
+      <li>M.Tech/MS in advanced computing fields</li>
+      <li>MBA for tech-management careers</li>
+      <li>AWS, Azure, Google Cloud Certifications</li>
+      <li>Java, Python, CCNA, Security+ Certifications</li>
+    </ul>
+  </section>
+
+  <section class="container">
+    <h2>Industries Hiring CSE Graduates</h2>
+    <ul class="box-list">
+      <li>IT & Software (Infosys, TCS, Wipro)</li>
+      <li>E-commerce (Amazon, Flipkart)</li>
+      <li>Startups (Razorpay, Swiggy, Zomato)</li>
+      <li>Tech Giants (Google, Microsoft, Meta)</li>
+      <li>Finance & Banking (JPMorgan, Goldman Sachs)</li>
+      <li>Government & Research (ISRO, DRDO)</li>
+    </ul>
+  </section>
+
+  <footer>
+    <h2>About GVIC</h2>
+    <p>
+      Golden Valley Integrated Campus (GVIC) is one of India's top integrated campuses, offering future-ready education just 11 km from Madanapalle.
+    </p>
+    <p>
+      Our mission is to provide global-quality education under the leadership of Shri N.V. Ramana Reddy and a team of dedicated professionals.
+    </p>
+    <p>© 2025 GVIC | Golden Valley Integrated Campus. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

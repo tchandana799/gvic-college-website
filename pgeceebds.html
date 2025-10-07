@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PG ECE – VLSI & Embedded Systems</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #8caee6, #11131b);
+      color: #222;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2b5876, #4e4376);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      background-image: url('https://images.unsplash.com/photo-1537432376769-00a5d2d04c55');
+      background-size: cover;
+      background-position: center;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px #00000070;
+    }
+
+    header p {
+      font-size: 1.2em;
+      text-shadow: 1px 1px 3px #00000060;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .box {
+      background: linear-gradient(135deg, #ffffff, #e0eaff);
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .box h2 {
+      margin-top: 0;
+      background: linear-gradient(to right, #4b6cb7, #182848);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 1.8em;
+    }
+
+    .collapsible {
+      background: linear-gradient(120deg, #4b6cb7, #182848);
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 1.2em;
+      border-radius: 12px;
+      margin-top: 40px;
+    }
+
+    .collapsible:hover {
+      background: linear-gradient(120deg, #3a5ca0, #141e30);
+    }
+
+    .content {
+      padding: 20px;
+      display: none;
+      overflow: hidden;
+      background-color: #f4f8ff;
+      border-radius: 0 0 12px 12px;
+    }
+
+    footer {
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.95em;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+      .box {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>PG ECE – VLSI & Embedded Systems</h1>
+    <p>Design the future of electronics with advanced embedded and VLSI technologies</p>
+  </header>
+
+  <div class="container">
+
+    <div class="box">
+      <h2>Course Overview</h2>
+      <p>This program aims to produce skilled engineers with a deep understanding of Very-Large-Scale Integration (VLSI) and Embedded System design. Students learn both hardware and software aspects of embedded computing systems and semiconductor design.</p>
+    </div>
+
+    <div class="box">
+      <h2>What You Will Learn</h2>
+      <ul>
+        <li>VLSI Design Principles & CAD Tools</li>
+        <li>ASIC/FPGA Architecture & Programming</li>
+        <li>Embedded Systems Design & RTOS</li>
+        <li>Low Power & High-Speed Circuit Design</li>
+        <li>Microcontrollers, ARM Architecture, IoT</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h2>Skills You Develop</h2>
+      <ul>
+        <li>Verilog / VHDL Coding</li>
+        <li>System-on-Chip (SoC) Development</li>
+        <li>PCB Design & Simulation</li>
+        <li>Embedded C & Real-time OS</li>
+        <li>Signal Processing with Embedded Systems</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h2>Career Opportunities</h2>
+      <ul>
+        <li>VLSI Design Engineer</li>
+        <li>FPGA Developer</li>
+        <li>Embedded Software Developer</li>
+        <li>ASIC Verification Engineer</li>
+        <li>IoT System Architect</li>
+      </ul>
+    </div>
+
+    <button class="collapsible">About PG ECE – VLSI & Embedded Systems</button>
+    <div class="content">
+      <p>The PG program in ECE with a focus on VLSI and Embedded Systems equips students with the knowledge to design and innovate in the microelectronics domain. With increasing demand in consumer electronics, defense, medical devices, and automation industries, this program is ideal for engineers who want to pursue core technology roles. Students work on state-of-the-art labs, industry projects, and learn from experienced faculty. The curriculum is continuously updated to reflect the latest in chip design and embedded computing trends.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 GVIC College - Department of ECE | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    const coll = document.querySelector(".collapsible");
+    const content = document.querySelector(".content");
+
+    coll.addEventListener("click", function () {
+      this.classList.toggle("active");
+      content.style.display = content.style.display === "block" ? "none" : "block";
+    });
+  </script>
+
+</body>
+</html>

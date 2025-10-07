@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.Tech Scholarships in Andhra Pradesh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">B.Tech Scholarships</h1>
+            <p class="text-xl md:text-2xl mb-8"> GOLDEN VALLEY INTEGRATED CAMPUS</p>
+            <p class="text-lg opacity-90 max-w-2xl mx-auto">Discover funding opportunities for your engineering education</p>
+        </div>
+    </header>
+
+    <!-- Filter Section -->
+    <div class="container mx-auto px-6 py-8">
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Filter Scholarships</h2>
+            <div class="grid md:grid-cols-3 gap-4">
+                <select id="categoryFilter" class="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <option value="all">All Categories</option>
+                    <option value="merit">Merit-Based</option>
+                    <option value="need">Need-Based</option>
+                    <option value="minority">Minority</option>
+                    <option value="government">Government</option>
+                </select>
+                <select id="collegeFilter" class="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <option value="all">All Colleges</option>
+                    <option value="jntu">JNTU Anantapur</option>
+                    <option value="au">Andhra University</option>
+                </select>
+                <button onclick="resetFilters()" class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-2 rounded-lg transition-colors">
+                    Reset Filters
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scholarships Grid -->
+    <div class="container mx-auto px-6 pb-16">
+        <div id="scholarshipGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Scholarship cards will be populated by JavaScript -->
+        </div>
+    </div>
+
+
+
+    <script>
+        const scholarships = [
+            {
+                name: "AP State Merit Scholarship",
+                provider: "Government of Andhra Pradesh",
+                category: "merit",
+                college: "all",
+                eligibility: "85%+ in 12th grade, Family income < ₹2 LPA",
+                deadline: "To be announced",
+                description: "Merit-based scholarship for top performers in intermediate education.",
+                benefits: ["Full tuition fee waiver", "Monthly stipend", "Book allowance"]
+            },
+            {
+                name: "Minority Community Scholarship",
+                provider: "AP Minority Welfare Department",
+                category: "minority",
+                college: "all",
+                eligibility: "Minority community students, Family income < ₹2 LPA",
+                deadline: "To be announced",
+                description: "Supporting minority students in pursuing engineering education.",
+                benefits: ["Partial tuition coverage", "Hostel fee assistance", "Exam fee waiver"]
+            },
+            {
+                name: "JNTUA Innovation Scholarship",
+                provider: "JNTU Anantapur",
+                category: "merit",
+                college: "jntu",
+                eligibility: "Top 10% in entrance exam, Innovation project submission",
+                deadline: "To be announced",
+                description: "Encouraging innovative thinking in engineering students.",
+                benefits: ["Project funding", "Mentorship program", "Industry exposure"]
+            },
+            {
+                name: "Central Government SC/ST Scholarship",
+                provider: "Ministry of Social Justice",
+                category: "government",
+                college: "all",
+                eligibility: "SC/ST category, Family income < ₹2 LPA",
+                deadline: "To be announced",
+                description: "Central government initiative for SC/ST engineering students.",
+                benefits: ["Full academic support", "Living allowance", "Book grant"]
+            },
+         
+            {
+                name: "Women in Engineering Scholarship",
+                provider: "AP Women Development Corporation",
+                category: "need",
+                college: "all",
+                eligibility: "Female candidates, Family income < ₹2 LPA",
+                deadline: "To be announced",
+                description: "Promoting women's participation in engineering fields.",
+                benefits: ["Academic fee support", "Safety measures", "Skill development"]
+            },
+            {
+                name: "Rural Development Scholarship",
+                provider: "AP Rural Development Department",
+                category: "government",
+                college: "all",
+                eligibility: "Rural area students, Family income < ₹2 LPA",
+                deadline: "To be announced",
+                description: "Supporting rural students in accessing quality engineering education.",
+                benefits: ["Transportation allowance", "Digital device support", "Coaching assistance"]
+            }
+        ];
+
+        function renderScholarships(scholarshipsToRender = scholarships) {
+            const grid = document.getElementById('scholarshipGrid');
+            grid.innerHTML = '';
+
+            scholarshipsToRender.forEach((scholarship, index) => {
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-lg shadow-md p-6 card-hover';
+                card.innerHTML = `
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800 flex-1">${scholarship.name}</h3>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium ml-2">
+                            ${scholarship.category.charAt(0).toUpperCase() + scholarship.category.slice(1)}
+                        </span>
+                    </div>
+                    <p class="text-gray-600 mb-3">${scholarship.provider}</p>
+                    <p class="text-gray-700 mb-4">${scholarship.description}</p>
+                    <div class="space-y-2 mb-4">
+                        <p class="text-sm"><strong>Eligibility:</strong> ${scholarship.eligibility}</p>
+                        <p class="text-sm"><strong>Deadline:</strong> ${scholarship.deadline}</p>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-sm font-medium text-gray-700 mb-2">Benefits:</p>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            ${scholarship.benefits.map(benefit => `<li>• ${benefit}</li>`).join('')}
+                        </ul>
+                    </div>
+
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterScholarships() {
+            const categoryFilter = document.getElementById('categoryFilter').value;
+            const collegeFilter = document.getElementById('collegeFilter').value;
+
+            let filtered = scholarships;
+
+            if (categoryFilter !== 'all') {
+                filtered = filtered.filter(s => s.category === categoryFilter);
+            }
+
+            if (collegeFilter !== 'all') {
+                filtered = filtered.filter(s => s.college === collegeFilter);
+            }
+
+            renderScholarships(filtered);
+        }
+
+        function resetFilters() {
+            document.getElementById('categoryFilter').value = 'all';
+            document.getElementById('collegeFilter').value = 'all';
+            renderScholarships();
+        }
+
+
+
+        // Event listeners
+        document.getElementById('categoryFilter').addEventListener('change', filterScholarships);
+        document.getElementById('collegeFilter').addEventListener('change', filterScholarships);
+
+
+
+        // Initial render
+        renderScholarships();
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'978bff82d3f63227',t:'MTc1NjgwNTUyNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

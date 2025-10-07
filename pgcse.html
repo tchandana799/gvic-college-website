@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PG CSE Program</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f4f7f9;
+      color: #333;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #1a2980, #26d0ce);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .program-intro {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .program-intro h2 {
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      padding: 20px;
+      border-radius: 12px;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .details {
+      padding: 40px 20px;
+      background-color: #fff;
+    }
+
+    .details h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .details ul {
+      list-style: none;
+      padding: 0;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .details li {
+      background: #e0ecff;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+    }
+
+    .toggle-section {
+      padding: 30px 20px;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+
+    .toggle-button {
+      padding: 12px 20px;
+      font-size: 1rem;
+      background: linear-gradient(135deg, #ff416c, #ff4b2b);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .toggle-content {
+      margin-top: 20px;
+      display: none;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+    }
+    .admissions-label {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.admissions-label a {
+    display: inline-block;
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admissions-label a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.what-students{
+  display: block;
+  text-align: center;
+  background:linear-gradient(#37d4c7,#c2b7b7,#ff8a00);
+  padding: 120px 20px;
+  border: lightgoldenrodyellow;
+  transition: cubic-bezier(1, 0, 0, 1);
+}
+.what-students h1{
+  display: inline-block;
+  text-align: center;
+  background: linear-gradient( #26d0ce , #e52e71);
+  padding: 12px 24px;
+border-radius: 30px;
+font-weight: bold;
+
+}
+.what-students h1:hover{
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+}
+
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <h1>Postgraduate Program in Computer Science & Engineering</h1>
+     <!-- Admissions Link Label -->
+<div class="admissions-label">
+    <a href="admission.html">🎓 Admissions Opened</a>
+</div>
+  </header>
+
+  <section class="program-intro">
+    <h2>PG CSE Program Highlights</h2>
+    <div class="grid">
+      <div class="card">Advanced Algorithms</div>
+      <div class="card">Cloud Computing</div>
+      <div class="card">AI & Machine Learning</div>
+      <div class="card">Blockchain & IoT</div>
+      <div class="card">Cybersecurity</div>
+      <div class="card">Data Science</div>
+    </div>
+  </section>
+  <section class="what-students">
+    <h1>what students learning</h1>
+
+     <div style="max-width: 1200px; margin: auto;">
+    <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 30px;">🔍 Core Learning Areas</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+      
+      <div style="background: rgba(255,255,255,0.1); border-radius: 15px; padding: 20px; transition: transform 0.3s;">
+        <h3>Advanced Algorithms & Data Structures</h3>
+        <ul>
+          <li>Design and analysis of algorithms</li>
+          <li>Graph theory, NP-completeness</li>
+          <li>Optimization techniques</li>
+        </ul>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.1); border-radius: 15px; padding: 20px; transition: transform 0.3s;">
+        <h3>Machine Learning & Artificial Intelligence</h3>
+        <ul>
+          <li>Supervised and unsupervised learning</li>
+          <li>Deep learning, neural networks</li>
+          <li>Natural Language Processing (NLP)</li>
+        </ul>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.1); border-radius: 15px; padding: 20px; transition: transform 0.3s;">
+        <h3>Advanced Operating Systems</h3>
+        <ul>
+          <li>Process synchronization, memory management</li>
+          <li>Distributed systems and security</li>
+          <li>Kernel-level programming</li>
+        </ul>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.1); border-radius: 15px; padding: 20px; transition: transform 0.3s;">
+        <h3>Computer Networks & Cybersecurity</h3>
+        <ul>
+          <li>Network architecture and protocols</li>
+          <li>Secure systems design</li>
+          <li>Ethical hacking and cryptography</li>
+        </ul>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.1); border-radius: 15px; padding: 20px; transition: transform 0.3s;">
+        <h3>Cloud Computing & Distributed Systems</h3>
+        <ul>
+          <li>Virtualization, containers (e.g., Docker, Kubernetes)</li>
+          <li>Distributed databases</li>
+          <li>Serverless and scalable architectures</li>
+        </ul>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.1); border-radius: 15px; padding: 20px; transition: transform 0.3s;">
+        <h3>Big Data & Data Analytics</h3>
+        <ul>
+          <li>Hadoop ecosystem (MapReduce, HDFS)</li>
+          <li>Apache Spark, data mining</li>
+          <li>Real-time analytics</li>
+        </ul>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.1); border-radius: 15px; padding: 20px; transition: transform 0.3s;">
+        <h3>Software Engineering & DevOps</h3>
+        <ul>
+          <li>Software development life cycle (SDLC)</li>
+          <li>Agile, Scrum methodologies</li>
+          <li>CI/CD tools, containerization</li>
+        </ul>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.1); border-radius: 15px; padding: 20px; transition: transform 0.3s;">
+        <h3>Database Technologies</h3>
+        <ul>
+          <li>Advanced SQL, NoSQL databases</li>
+          <li>Database tuning and transaction management</li>
+          <li>Data warehousing and mining</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  </section>
+
+  <section class="details">
+    <h2>Course Details</h2>
+    <ul>
+      <li><strong>Duration:</strong> 2 Years (4 Semesters)</li>
+      <li><strong>Eligibility:</strong> B.Tech/B.E in CSE or equivalent</li>
+      <li><strong>Curriculum:</strong> Aligned with UGC & AICTE standards</li>
+      <li><strong>Projects:</strong> Industry-based live projects</li>
+      <li><strong>Internships:</strong> Compulsory in final semester</li>
+    </ul>
+  </section>
+
+  <section class="toggle-section">
+    <button class="toggle-button" onclick="toggleAbout()">About PG CSE</button>
+    <div class="toggle-content" id="aboutContent">
+      <p>
+        The Postgraduate program in Computer Science and Engineering is designed to develop research and innovation-driven professionals in fields such as AI, Cloud, Data Analytics, and Security. This program equips students with advanced technical knowledge and leadership skills to thrive in both industry and academia.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Your College Name. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleAbout() {
+      const content = document.getElementById('aboutContent');
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
